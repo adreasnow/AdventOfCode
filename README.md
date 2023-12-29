@@ -5,7 +5,7 @@ Working through the AoC tasks, this is a space in which I can collect all of my 
 ## Progress
 | | 2015 | 2016 |
 |:- |:-:|:-: |
-| Day 1 | :running: | |
+| Day 1 | :white_check_mark: | |
 | Day 2 |  | |
 | Day 3 |  | |
 | Day 4 |  | |
