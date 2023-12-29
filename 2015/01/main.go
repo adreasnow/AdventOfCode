@@ -25,10 +25,8 @@ func calcFloor(data []byte) (int, int) {
 		} else if b == c {
 			floor--
 		}
-		if floor == -1 {
-			if basement == 0 {
-				basement = count + 1
-			}
+		if floor == -1 && basement == 0 {
+			basement = count + 1
 		}
 	}
 	return floor, basement
