@@ -5,31 +5,42 @@ import (
 	"os"
 )
 
-func calcFloor(input string) (int, error) {
+func readData(input string) ([]byte, error) {
+	data, err := os.ReadFile(input)
+	if err != nil {
+		return nil, err
+	}
+	return data, nil
+}
+
+func calcFloor(data []byte) (int, int) {
 	floor := 0
+	basement := 0
 	o := byte('(')
 	c := byte(')')
 
-	data, err := os.ReadFile(input)
-	if err != nil {
-		return 0, err
-	}
-
-	for _, b := range data {
+	for count, b := range data {
 		if b == o {
 			floor++
 		} else if b == c {
 			floor--
 		}
+		if floor == -1 {
+			if basement == 0 {
+				basement = count + 1
+			}
+		}
 	}
-	return floor, nil
+	return floor, basement
 }
 
 func main() {
-	floor, err := calcFloor("input.txt")
+	data, err := readData("input.txt")
+	floor, basement := calcFloor(data)
 	if err != nil {
 		fmt.Println(err.Error())
 	} else {
-		fmt.Println(floor)
+		fmt.Printf("The final floor is %d\n", floor)
+		fmt.Printf("Character that causes Santa to enter the basement is: %d", basement)
 	}
 }
