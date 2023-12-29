@@ -20,3 +20,5 @@ For example:
 `)))` and `)())())` both result in floor -3.
 To what floor do the instructions take Santa?
 
+#### Answer
+`138`
