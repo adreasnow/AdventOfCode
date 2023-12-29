@@ -1,50 +1,35 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"os"
 )
 
-func readInput(fileName string) (string, error) {
-	file, err := os.Open(fileName)
-	if err != nil {
-		return "", err
-	}
-	defer file.Close()
-
-	input := make([]string, 0)
-	scanner := bufio.NewScanner(file)
-
-	for scanner.Scan() {
-		input = append(input, scanner.Text())
-	}
-
-	if err := scanner.Err(); err != nil {
-		return "", err
-	}
-
-	return input[0], err
-}
-
-func calcFloors(FloorString *string) int {
+func calcFloor(input string) (int, error) {
 	floor := 0
-	for _, rune := range *FloorString {
-		if rune == '(' {
+	o := byte('(')
+	c := byte(')')
+
+	data, err := os.ReadFile(input)
+	if err != nil {
+		return 0, err
+	}
+
+	for _, b := range data {
+		if b == o {
 			floor++
-		} else if rune == ')' {
+		} else if b == c {
 			floor--
 		}
 	}
-
-	return floor
+	return floor, nil
 }
 
 func main() {
-	contents, err := readInput("input.txt")
+	floor, err := calcFloor("input.txt")
 	if err != nil {
 		fmt.Println(err.Error())
 	} else {
-		fmt.Println((calcFloors(&contents)))
+		fmt.Println(floor)
 	}
 }
