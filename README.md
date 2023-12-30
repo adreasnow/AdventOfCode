@@ -9,7 +9,7 @@ Working through the AoC tasks, this is a space in which I can collect all of my 
 | Day 2 | :white_check_mark: | |
 | Day 3 | :white_check_mark: | |
 | Day 4 | :white_check_mark: | |
-| Day 5 |  | |
+| Day 5 | :white_check_mark: | |
 | Day 6 |  | |
 | Day 7 |  | |
 | Day 8 |  | |
