@@ -5,11 +5,6 @@ import (
 	"os"
 )
 
-// Let the arrows indicate 2d coordinates
-//     < and > X coordinates and ^ and v are Y
-// Concatenate each coordinate to a string, and use it as the index for a map
-// You can count the entries in the map to see how many houses have been visited
-
 func readData(input string) ([]byte, error) {
 	data, err := os.ReadFile(input)
 	if err != nil {
