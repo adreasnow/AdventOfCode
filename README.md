@@ -1,6 +1,8 @@
 # Adrea's Advent of Code
 
-Working through the AoC tasks, this is a space in which I can collect all of my solutions
+Working through the [AoC tasks](https://adventofcode.com), this is a space in which I can collect all of my solutions. 
+
+At the moment I'm doing them in golang, simply because I really enjoy using the language and I feel like I can develop more robust code much more simply than if I were to try and use C# (what I use for work) or python (what I used for my PhD). I may decide to switch to C# at some point so that I can hone those skills, but I really do dislike OOP and the tedium of .net.
 
 ## Progress
 | | 2015 | 2016 |
