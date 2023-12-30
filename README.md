@@ -5,11 +5,11 @@ Working through the AoC tasks, this is a space in which I can collect all of my 
 ## Progress
 | | 2015 | 2016 |
 |:- |:-:|:-: |
-| Day 1 | :white_check_mark: | |
-| Day 2 | :white_check_mark: | |
-| Day 3 | :white_check_mark: | |
-| Day 4 | :white_check_mark: | |
-| Day 5 | :white_check_mark: | |
+| Day 1 | [:white_check_mark:](2015/01/README.md) | |
+| Day 2 | [:white_check_mark:](2015/02/README.md) | |
+| Day 3 | [:white_check_mark:](2015/03/README.md) | |
+| Day 4 | [:white_check_mark:](2015/04/README.md) | |
+| Day 5 | [:white_check_mark:](2015/04/README.md) | |
 | Day 6 |  | |
 | Day 7 |  | |
 | Day 8 |  | |
