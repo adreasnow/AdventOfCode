@@ -56,13 +56,13 @@ func ReadStrings(fileName string) ([]string, error) {
 // 	return true
 // }
 
-//	func CheckString(s string) bool {
-//		if CheckVowels(s) && CheckDoubles(s) && CheckBads(s) {
-//			return true
-//		} else {
-//			return false
-//		}
-//	}
+// func CheckString(s string) bool {
+// 	if CheckVowels(s) && CheckDoubles(s) && CheckBads(s) {
+// 		return true
+// 	} else {
+// 		return false
+// 	}
+// }
 
 func CheckRepeatWOOverlap(s string) bool {
 	pairs := make(map[string]int, 0)
