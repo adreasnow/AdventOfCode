@@ -4,22 +4,6 @@ import (
 	"testing"
 )
 
-// func TestCheckRepeatWOOverlap(t *testing.T) {
-// 	PassTestCases := []string{"xyxy",
-// 		"aabcdefgaa"}
-// 	for _, s := range PassTestCases {
-// 		if !CheckRepeatWOOverlap(s) {
-// 			t.Errorf("failed %s", s)
-// 		}
-// 	}
-// 	FailTestCases := []string{"aaa"} // only one vowel
-// 	for _, s := range FailTestCases {
-// 		if CheckRepeatWOOverlap(s) {
-// 			t.Errorf("did not fail %s", s)
-// 		}
-// 	}
-// }
-
 func TestDecode(t *testing.T) {
 	strings := map[string]int{"\"\"": 0,
 		"\"abc\"":        3,
