@@ -16,7 +16,7 @@ At the moment I'm doing them in golang, simply because I really enjoy using the 
 | Day 7 | [:white_check_mark:](2015/07/README.md) | |
 | Day 8 | [:white_check_mark:](2015/08/README.md) | |
 | Day 9 | [:white_check_mark:](2015/09/README.md) | |
-| Day 10 |  | |
+| Day 10 | [:white_check_mark:](2015/10/README.md) | |
 | Day 11 |  | |
 | Day 12 |  | |
 | Day 13 |  | |
