@@ -23,7 +23,7 @@ At the moment I'm doing them in golang, simply because I really enjoy using the 
 | Day 14 | [:white_check_mark:](2015/14/README.md) | |
 | Day 15 | [:white_check_mark:](2015/15/README.md) | |
 | Day 16 | [:white_check_mark:](2015/16/README.md) | |
-| Day 17 |  | |
+| Day 17 | [:white_check_mark:](2015/16/README.md) | |
 | Day 18 |  | |
 | Day 19 |  | |
 | Day 20 |  | |
