@@ -1,6 +1,6 @@
 module aoc
 
-go 1.21.6
+go 1.22.0
 
 require (
 	github.com/mowshon/iterium v1.0.0 // indirect
