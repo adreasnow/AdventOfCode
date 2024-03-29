@@ -2,18 +2,20 @@ package main
 
 import (
 	"fmt"
+	"reflect"
 	"testing"
 )
 
 func TestRemoveIndex(t *testing.T) {
 	a := []string{"a", "b"}
 	b := []string{"c", "d"}
-	input := [][]string{a, b}
+	c := []string{"c", "e"}
+	input := [][]string{a, b, c}
 
 	output := RemoveIndex(input, b)
-	expected := [][]string{a}
+	expected := [][]string{a, c}
 
-	if len(output) != 1 {
+	if !reflect.DeepEqual(output, expected) {
 		t.Errorf("Output of did not match expectation.")
 		fmt.Println("Output", output)
 		fmt.Println("Expected", expected)
@@ -24,12 +26,13 @@ func TestGetLongestIndex(t *testing.T) {
 	a := []string{"a", "bbb"}
 	b := []string{"c", "dd"}
 	c := []string{"e", "ffff"}
-	input := [][]string{a, b, c}
+	d := []string{"e", "fffg"}
+	input := [][]string{a, b, c, d}
 
 	output, _ := GetLongestIndex(input)
 	expected := c
 
-	if output[0] != c[0] {
+	if !reflect.DeepEqual(output, expected) {
 		t.Errorf("Output of did not match expectation.")
 		fmt.Println("Output", output)
 		fmt.Println("Expected", expected)
