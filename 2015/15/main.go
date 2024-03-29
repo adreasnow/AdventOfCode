@@ -107,6 +107,7 @@ func main() {
 		fmt.Println(err.Error())
 		os.Exit(1)
 	}
+
 	for _, s := range input {
 		ingredients.ParseIngredient(s)
 	}
@@ -143,4 +144,5 @@ func main() {
 		}
 	}
 	fmt.Printf("The highest scoring cookie with a 500 calorie limit is %d.\n", maxScore)
+
 }
