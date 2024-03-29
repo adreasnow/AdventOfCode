@@ -67,13 +67,10 @@ func RemoveIndex(l [][]string, o []string) [][]string {
 }
 
 func Calc(molecule string, replacements [][]string) int {
-	f := make([]string, 0)
-	var err error
-
 	F := 0
 	current := molecule
 	for current != "e" {
-		f, err = GetLongestIndex(replacements)
+		f, err := GetLongestIndex(replacements)
 		if err != nil {
 			replacements = a_replacements
 			f, _ = GetLongestIndex(replacements)
