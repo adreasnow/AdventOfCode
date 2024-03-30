@@ -1,0 +1,39 @@
+name: Generate AoC 2015Badges
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  badges:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: AoC-badges 2015
+        uses: J0B10/aoc-badges-action@v3.0.0
+        with:
+          userid: 3970684
+          session: ${{ secrets.AOC_SESSION }}
+          year: 2015
+          # leadreboard: https://adventofcode.com/2015/leaderboard/private/view/3970684
+          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20(2015)%20⭐-)[0-9]+(?=-yellow)'
+          daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/days%20(2015)-)[0-9]+(?=-red)'
+      - name: AoC-badges 2016
+        uses: J0B10/aoc-badges-action@v3.0.0
+        with:
+          userid: 3970684
+          session: ${{ secrets.AOC_SESSION }}
+          year: 2015
+          # leadreboard: https://adventofcode.com/2015/leaderboard/private/view/3970684
+          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20(2016)%20⭐-)[0-9]+(?=-yellow)'
+          daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/days%20(2016)-)[0-9]+(?=-red)'
+
+      - uses: stefanzweifel/git-auto-commit-action@v5 # Step that pushes these local changes back to your github repo
+        with:
+          commit_message: Update badges
+          file_pattern: README.md
