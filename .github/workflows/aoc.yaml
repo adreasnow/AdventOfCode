@@ -20,7 +20,7 @@ jobs:
           userid: 3970684
           session: ${{ secrets.AOC_SESSION }}
           year: 2015
-          # leadreboard: https://adventofcode.com/2015/leaderboard/private/view/3970684
+          leadreboard: https://adventofcode.com/2015/leaderboard/private/view/3970684
           starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20(2015)%20⭐-)[0-9]+(?=-yellow)'
           daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/days%20(2015)-)[0-9]+(?=-red)'
       - name: AoC-badges 2016
@@ -29,7 +29,7 @@ jobs:
           userid: 3970684
           session: ${{ secrets.AOC_SESSION }}
           year: 2015
-          # leadreboard: https://adventofcode.com/2015/leaderboard/private/view/3970684
+          leadreboard: https://adventofcode.com/2015/leaderboard/private/view/3970684
           starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20(2016)%20⭐-)[0-9]+(?=-yellow)'
           daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/days%20(2016)-)[0-9]+(?=-red)'
 
