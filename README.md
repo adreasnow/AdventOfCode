@@ -9,7 +9,7 @@ At the moment I'm doing them in golang, simply because I really enjoy using the 
 
 | | 2015 | 2016 |
 |:- |:-:|:-: |
-| Stats | ![](https://img.shields.io/badge/stars%20(2015)%20⭐-0-yellow)<br/>![](https://img.shields.io/badge/days%20(2015)-0-red) | ![](https://img.shields.io/badge/stars%20(2016)%20⭐-0-yellow)<br/>![](https://img.shields.io/badge/days%20(2016)-0-red) | 
+| Stats | ![](https://img.shields.io/badge/stars%20(2015)%20⭐-39-yellow)<br/>![](https://img.shields.io/badge/days%20(2015)-19-red) | ![](https://img.shields.io/badge/stars%20(2016)%20⭐-0-yellow)<br/>![](https://img.shields.io/badge/days%20(2016)-0-red) | 
 | Day 1 | <a href="2015/01/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | |
 | Day 2 | <a href="2015/02/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | |
 | Day 3 | <a href="2015/03/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | |
