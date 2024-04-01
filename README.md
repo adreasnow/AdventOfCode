@@ -36,4 +36,4 @@ At the moment I'm doing them in golang, simply because I really enjoy using the 
 | Day 24 |  | |
 | Day 25 |  | |
 
-Icons from [tandpfun/skill-icons](https://github.com/tandpfun/skill-icons)
+Icons from favicons
