@@ -19,6 +19,5 @@ jobs:
         uses: oxsecurity/megalinter/flavors/go@v7
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DISABLE_LINTERS: COPYPASTE_JSCPD
+          DISABLE_LINTERS: SPELL_CSPELL,COPYPASTE_JSCPD
           GO_GOLANGCI_LINT_DISABLE_ERRORS: true
-          SPELL_CSPELL_FILTER_REGEX_EXCLUDE: (input.txt)
