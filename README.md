@@ -27,11 +27,11 @@ At the moment I'm doing them in golang, simply because I really enjoy using the 
 | Day 11 | <a href="2015/11/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | | :white_check_mark: | |
 | Day 12 | <a href="2015/12/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | | | |
 | Day 13 | <a href="2015/13/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | | | |
-| Day 14 | <a href="2015/14/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | | | Finite differences differnatial solver |
+| Day 14 | <a href="2015/14/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | | | Finite differences differential solver |
 | Day 15 | <a href="2015/15/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | | :white_check_mark: | |
 | Day 16 | <a href="2015/16/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | | | |
 | Day 17 | <a href="2015/17/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | | | Manual binary adder |
-| Day 18 | <a href="2015/18/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | | | Cellular automata|
+| Day 18 | <a href="2015/18/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | | | Cellular automata |
 | Day 19 | <a href="2015/19/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | :white_check_mark: | | |
 | Day 19-stolen | <a href="2015/19-stolen/main.go"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | | :white_check_mark: | |
 | Day 20 | <a href="2015/20/main.go"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | :white_check_mark: | :white_check_mark: | Mutex (so fkn proud of myself) |
