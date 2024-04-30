@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-func ReadInstructions(fileName string) ([]string, error) {
+func readInstructions(fileName string) ([]string, error) {
 	file, err := os.Open(fileName)
 	if err != nil {
 		return nil, err
@@ -79,7 +79,7 @@ func compute(target string) uint16 {
 	return value
 }
 
-func ParseInstruction(s string) error {
+func parseInstruction(s string) error {
 	var target string
 	i := Wire{}
 
@@ -102,13 +102,13 @@ func ParseInstruction(s string) error {
 }
 
 func main() {
-	instructions, err := ReadInstructions("input.txt")
+	instructions, err := readInstructions("input.txt")
 
 	if err != nil {
 		fmt.Println(err.Error())
 	} else {
 		for _, i := range instructions {
-			err := ParseInstruction(i)
+			err := parseInstruction(i)
 			if err != nil {
 				fmt.Println(err.Error())
 				os.Exit(1)
@@ -116,7 +116,7 @@ func main() {
 		}
 	}
 
-	ParseInstruction("3176 -> b")
+	parseInstruction("3176 -> b")
 	// for i, res := range wires {
 	// 	fmt.Printf("%s: %v\n", i, res)
 	// }

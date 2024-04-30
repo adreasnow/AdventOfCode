@@ -17,7 +17,7 @@ type instruction struct {
 	action     string
 }
 
-func ReadStrings(fileName string) ([]string, error) {
+func readStrings(fileName string) ([]string, error) {
 	file, err := os.Open(fileName)
 	if err != nil {
 		return nil, err
@@ -38,7 +38,7 @@ func ReadStrings(fileName string) ([]string, error) {
 	return input, err
 }
 
-func CountLights(lights *[1000][1000]int) int {
+func countLights(lights *[1000][1000]int) int {
 	count := 0
 	for _, i := range lights {
 		for _, j := range i {
@@ -48,7 +48,7 @@ func CountLights(lights *[1000][1000]int) int {
 	return count
 }
 
-func BuildRange(l lightPos, u lightPos, r *instruction) {
+func buildRange(l lightPos, u lightPos, r *instruction) {
 	for x := l.x; x <= u.x; x++ {
 		for y := l.y; y <= u.y; y++ {
 			r.lightRange = append(r.lightRange, lightPos{x: x, y: y})
@@ -56,7 +56,7 @@ func BuildRange(l lightPos, u lightPos, r *instruction) {
 	}
 }
 
-func BuildInstruction(s string) (*instruction, error) {
+func buildInstruction(s string) (*instruction, error) {
 	inst := instruction{}
 	l := len(strings.Split(s, " "))
 	lowerpos := lightPos{}
@@ -72,11 +72,11 @@ func BuildInstruction(s string) (*instruction, error) {
 	if err != nil {
 		return nil, err
 	}
-	BuildRange(lowerpos, upperpos, &inst)
+	buildRange(lowerpos, upperpos, &inst)
 	return &inst, nil
 }
 
-func EnactInstruction(inst *instruction, lights *[1000][1000]int) {
+func enactInstruction(inst *instruction, lights *[1000][1000]int) {
 	for _, i := range inst.lightRange {
 		if inst.action == "on" {
 			lights[i.x][i.y]++
@@ -92,18 +92,18 @@ func EnactInstruction(inst *instruction, lights *[1000][1000]int) {
 
 func main() {
 	lights := [1000][1000]int{}
-	stringList, err := ReadStrings("input.txt")
+	stringList, err := readStrings("input.txt")
 	if err != nil {
 		fmt.Println(err.Error())
 	} else {
 		for _, s := range stringList {
-			inst, err := BuildInstruction(s)
+			inst, err := buildInstruction(s)
 			if err != nil {
 				fmt.Println(err.Error())
 			} else {
-				EnactInstruction(inst, &lights)
+				enactInstruction(inst, &lights)
 			}
 		}
-		fmt.Println(CountLights(&lights))
+		fmt.Println(countLights(&lights))
 	}
 }

@@ -12,7 +12,7 @@ func TestDecode(t *testing.T) {
 
 	var decodedLen int
 	for s, i := range strings {
-		decodedLen = len(Decode(s))
+		decodedLen = len(decode(s))
 		if decodedLen != i {
 			t.Errorf("Decoded %s to len %d instead of %d", s, decodedLen, i)
 		}
@@ -27,7 +27,7 @@ func TestEncode(t *testing.T) {
 
 	var encodedLen int
 	for s, i := range strings {
-		encodedLen = len(Encode(s))
+		encodedLen = len(encode(s))
 		if encodedLen != i {
 			t.Errorf("Decoded %s to len %d instead of %d", s, encodedLen, i)
 		}

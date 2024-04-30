@@ -33,7 +33,7 @@ perfumes: 1
 You make a list of the things you can remember about each Aunt Sue. Things missing from your list aren't zero - you simply don't remember the value.
 
 What is the **number** of the Sue that got you the gift?
-#### Answer
+### Answer
 `40`
 
 ## Part 2
@@ -43,5 +43,5 @@ In particular, the `cats` and `trees` readings indicates that there are **greate
 
 What is the number of the real Aunt Sue?
 
-#### Answer
+### Answer
 `241`

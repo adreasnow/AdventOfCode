@@ -1,16 +1,18 @@
 # Adrea's Advent of Code
 
-Working through the [AoC tasks](https://adventofcode.com), this is a space in which I can collect all of my solutions. 
+Working through the [AoC tasks](https://adventofcode.com), this is a space in which I can collect all of my solutions.
 
 At the moment I'm doing them in golang, simply because I really enjoy using the language and I feel like I can develop more robust code much more simply than if I were to try and use C# (what I use for work) or python (what I used for my PhD). I may decide to switch to C# at some point so that I can hone those skills, but I really do dislike OOP and the tedium of .net.
 
 ## Progress
+[![Mega-Linter](https://github.com/adreasnow/AdventOfCode/workflows/Mega-Linter/badge.svg)](https://github.com/adreasnow/AdventOfCode/actions?query=workflow%3AMega-Linter)
+
 
 ### 2015
 
 ![](https://img.shields.io/badge/stars%20(2015)%20⭐-40-yellow)<br/>![](https://img.shields.io/badge/days%20(2015)-20-red)
 
-| | Language | Threaded | Tests | Special | 
+| | Language | Threaded | Tests | Special |
 | :- | :-: | :-: | :-: | :-: |
 | Day 1 | <a href="2015/01/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | | | |
 | Day 2 | <a href="2015/02/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | | | |
@@ -32,16 +34,16 @@ At the moment I'm doing them in golang, simply because I really enjoy using the 
 | Day 18 | <a href="2015/18/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | | | Cellular automata|
 | Day 19 | <a href="2015/19/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | :white_check_mark: | | |
 | Day 19-stolen | <a href="2015/19-stolen/main.go"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | | :white_check_mark: | |
-| Day 20 | <a href="2015/20/main.go"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | :white_check_mark: | :white_check_mark: | Mutex (so fkn proud of myself) | 
-| Day 21 | | | | | 
-| Day 22 | | | | | 
-| Day 23 | | | | | 
-| Day 24 | | | | | 
-| Day 25 | | | | | 
+| Day 20 | <a href="2015/20/main.go"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | :white_check_mark: | :white_check_mark: | Mutex (so fkn proud of myself) |
+| Day 21 | | | | |
+| Day 22 | | | | |
+| Day 23 | | | | |
+| Day 24 | | | | |
+| Day 25 | | | | |
 
 ### 2016
 
-![](https://img.shields.io/badge/stars%20(2016)%20⭐-0-yellow)<br/>![](https://img.shields.io/badge/days%20(2016)-0-red) 
+![](https://img.shields.io/badge/stars%20(2016)%20⭐-0-yellow)<br/>![](https://img.shields.io/badge/days%20(2016)-0-red)
 
 | | Language | Threaded | Tests | Special | 
 | :- | :-: | :-: | :-: | :-: |

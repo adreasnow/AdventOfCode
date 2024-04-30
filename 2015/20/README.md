@@ -28,7 +28,7 @@ The first house gets 10 presents: it is visited only by Elf `1`, which delivers 
 What is the **lowest house number** of the house to get at least as many presents as the number in your puzzle input?
 
 Your puzzle input is **`29000000`**.
-#### Answer
+### Answer
 `665280`
 
 ## Part 2
@@ -36,7 +36,7 @@ The Elves decide they don't want to visit an infinite number of houses. Instead,
 
 With these changes, what is the new **lowest house number** of the house to get at least as many presents as the number in your puzzle input?
 
-#### Answer
+### Answer
 REALLY FUCKING COOL
 Did a refactor to add threading in about 10 mins, includung using a mutex! So proud of myself!!
 `705600`

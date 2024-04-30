@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func NextRune(i rune) (rune, bool) {
+func nextRune(i rune) (rune, bool) {
 	var out int
 	var wrap bool
 	if i <= 'y' {
@@ -18,7 +18,7 @@ func NextRune(i rune) (rune, bool) {
 	return rune(out), wrap
 }
 
-func NextString(s string) string {
+func nextString(s string) string {
 	var newRune rune
 	wrap := true
 	i := len(s) - 1
@@ -27,22 +27,22 @@ func NextString(s string) string {
 		if i == -1 {
 			return "aaaaaaaa"
 		}
-		newRune, wrap = NextRune(runeList[i])
+		newRune, wrap = nextRune(runeList[i])
 		runeList[i] = newRune
 		i--
 	}
 	return string(runeList)
 }
 
-func ContainsThreeLetterRun(s string) bool {
+func containsThreeLetterRun(s string) bool {
 	var i2 rune
 	var i3 rune
 	var wrap2 bool
 	var wrap3 bool
 
 	for i := 0; i <= len(s)-3; i++ {
-		i2, wrap2 = NextRune(rune(s[i]))
-		i3, wrap3 = NextRune(rune(s[i+1]))
+		i2, wrap2 = nextRune(rune(s[i]))
+		i3, wrap3 = nextRune(rune(s[i+1]))
 		if i2 == rune(s[i+1]) && i3 == rune(s[i+2]) && !(wrap2 || wrap3) {
 			return true
 		}
@@ -50,11 +50,11 @@ func ContainsThreeLetterRun(s string) bool {
 	return false
 }
 
-func DoesNotContain(s string) bool {
+func doesNotContain(s string) bool {
 	return !(strings.Contains(s, "i") || strings.Contains(s, "l") || strings.Contains(s, "o"))
 }
 
-func TwoNonOverlappingPairs(s string) bool {
+func twoNonOverlappingPairs(s string) bool {
 	overlapCount := 0
 	previousRune := rune(10)
 	previousIndex := -10
@@ -71,21 +71,21 @@ func TwoNonOverlappingPairs(s string) bool {
 	return overlapCount >= 2
 }
 
-func CheckString(s string) bool {
-	return ContainsThreeLetterRun(s) && DoesNotContain(s) && TwoNonOverlappingPairs(s)
+func checkString(s string) bool {
+	return containsThreeLetterRun(s) && doesNotContain(s) && twoNonOverlappingPairs(s)
 }
 
-func NextPassword(s string) string {
+func nextPassword(s string) string {
 	found := false
 	for !found {
-		s = NextString(s)
-		found = CheckString(s)
+		s = nextString(s)
+		found = checkString(s)
 	}
 	return s
 }
 
 func main() {
 	input := "hepxcrrq"
-	fmt.Printf("Part 1: Santa's next password is \"%s\"\n", NextPassword(input))
-	fmt.Printf("Part 2: Santa's next password is \"%s\"", NextPassword(NextPassword(input)))
+	fmt.Printf("Part 1: Santa's next password is \"%s\"\n", nextPassword(input))
+	fmt.Printf("Part 2: Santa's next password is \"%s\"", nextPassword(nextPassword(input)))
 }

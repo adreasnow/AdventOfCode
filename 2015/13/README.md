@@ -37,7 +37,7 @@ After trying every other seating arrangement in this hypothetical scenario, you 
 
 What is the total change in happiness for the optimal seating arrangement of the actual guest list?
 
-#### Answer
+### Answer
 `664`
 
 ## Part 2
@@ -47,5 +47,5 @@ So, add yourself to the list, and give all happiness relationships that involve 
 
 What is the total change in happiness for the optimal seating arrangement that actually includes yourself?
 
-#### Answer
+### Answer
 `640`

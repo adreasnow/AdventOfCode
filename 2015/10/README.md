@@ -16,7 +16,7 @@ Starting with the digits in your puzzle input, apply this process 40 times. What
 
 Your puzzle input is `1113122113`.
 
-#### Answer
+### Answer
 `360154`
 
 ## Part 2
@@ -24,5 +24,5 @@ Neat, right? You might also enjoy hearing John Conway talking about this sequenc
 
 Now, starting again with the digits in your puzzle input, apply this process 50 times. What is the length of the new result?
 
-#### Answer
+### Answer
 `5103798`

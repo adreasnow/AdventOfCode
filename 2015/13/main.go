@@ -10,7 +10,7 @@ import (
 	"github.com/mowshon/iterium"
 )
 
-func ReadStrings(fileName string) ([]string, error) {
+func readStrings(fileName string) ([]string, error) {
 	file, err := os.Open(fileName)
 	if err != nil {
 		return nil, err
@@ -31,7 +31,7 @@ func ReadStrings(fileName string) ([]string, error) {
 	return input, err
 }
 
-func ParseRule(rule string, rules *map[string]int, attendees *[]string) {
+func parseRule(rule string, rules *map[string]int, attendees *[]string) {
 	var attendeeName string
 	var partnerName string
 	var happiness int
@@ -53,7 +53,7 @@ func ParseRule(rule string, rules *map[string]int, attendees *[]string) {
 	(*rules)[key] = happiness
 }
 
-func CalculateHappiness(seating *[]string, rules *map[string]int) int {
+func calculateHappiness(seating *[]string, rules *map[string]int) int {
 	var key1 string
 	var key2 string
 
@@ -74,7 +74,7 @@ func CalculateHappiness(seating *[]string, rules *map[string]int) int {
 }
 
 func main() {
-	input, err := ReadStrings("input-2.txt")
+	input, err := readStrings("input-2.txt")
 	if err != nil {
 		fmt.Println(err.Error())
 		os.Exit(1)
@@ -84,7 +84,7 @@ func main() {
 	attendees := make([]string, 0)
 
 	for _, s := range input {
-		ParseRule(s, &rules, &attendees)
+		parseRule(s, &rules, &attendees)
 	}
 
 	permutations, _ := iterium.Permutations(attendees, len(attendees)).Slice()
@@ -92,7 +92,7 @@ func main() {
 	happiness := make([]int, 0)
 
 	for _, seating := range permutations {
-		happiness = append(happiness, CalculateHappiness(&seating, &rules))
+		happiness = append(happiness, calculateHappiness(&seating, &rules))
 	}
 
 	fmt.Printf("Max happiness is %d\n", slices.Max(happiness))

@@ -13,7 +13,7 @@ In this example, after the 1000th second, both reindeer are resting, and Comet i
 
 Given the descriptions of each reindeer (in your puzzle input), after exactly `2503` seconds, **what distance has the winning reindeer traveled**?
 
-#### Answer
+### Answer
 `2640`
 
 Got it in one! :smile:
@@ -31,7 +31,7 @@ After the 1000th second, Dancer has accumulated `689` points, while poor Comet, 
 
 Again given the descriptions of each reindeer (in your puzzle input), after exactly `2503` seconds, how many points does the winning reindeer have?
 
-#### Answer
+### Answer
 `1102`
 
 This one took me two goes :slightly_frowning_face:

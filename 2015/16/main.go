@@ -22,7 +22,7 @@ type Aunt struct {
 
 type Aunts map[int]Aunt
 
-func ReadStrings(fileName string) ([]string, error) {
+func readStrings(fileName string) ([]string, error) {
 	file, err := os.Open(fileName)
 	if err != nil {
 		return nil, err
@@ -43,7 +43,7 @@ func ReadStrings(fileName string) ([]string, error) {
 	return input, err
 }
 
-func (a *Aunts) ProcessAunt(s string) {
+func (a *Aunts) processAunt(s string) {
 	aunt := Aunt{
 		children:    -1,
 		cats:        -1,
@@ -101,7 +101,7 @@ func (a *Aunts) ProcessAunt(s string) {
 	(*a)[n] = aunt
 }
 
-func (a1 Aunt) CompareAunt(a2 Aunt) bool {
+func (a1 Aunt) compareAunt(a2 Aunt) bool {
 	matches := 0
 	if a1.children == a2.children {
 		matches++
@@ -153,15 +153,15 @@ func main() {
 		cars:        2,
 		perfumes:    1,
 	}
-	input, err := ReadStrings("input.txt")
+	input, err := readStrings("input.txt")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
 	for _, s := range input {
-		aunts.ProcessAunt(s)
+		aunts.processAunt(s)
 	}
 	for i, a := range aunts {
-		if myAunt.CompareAunt(a) {
+		if myAunt.compareAunt(a) {
 			fmt.Printf("My Aunt sue is Sue #%d", i)
 		}
 	}

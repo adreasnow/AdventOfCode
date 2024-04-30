@@ -25,7 +25,7 @@ type Reindeer struct {
 
 type Reindeers map[string]Reindeer
 
-func ReadStrings(fileName string) ([]string, error) {
+func readStrings(fileName string) ([]string, error) {
 	file, err := os.Open(fileName)
 	if err != nil {
 		return nil, err
@@ -46,7 +46,7 @@ func ReadStrings(fileName string) ([]string, error) {
 	return input, err
 }
 
-func (r Reindeers) ParseReindeer(s string) {
+func (r Reindeers) parseReindeer(s string) {
 	var name string
 	reindeer := Reindeer{}
 
@@ -58,7 +58,7 @@ func (r Reindeers) ParseReindeer(s string) {
 
 }
 
-func (r *Reindeers) SecondLoop() {
+func (r *Reindeers) secondLoop() {
 	for name, reindeer := range *r {
 		if reindeer.status.flying {
 			reindeer.status.distance += reindeer.speed
@@ -80,7 +80,7 @@ func (r *Reindeers) SecondLoop() {
 	}
 }
 
-func (r *Reindeers) CalculatePoints() {
+func (r *Reindeers) calculatePoints() {
 	distance := map[string]int{}
 	var name string
 	var reindeer Reindeer
@@ -102,7 +102,7 @@ func (r *Reindeers) CalculatePoints() {
 	}
 }
 
-func (r Reindeers) PrintStatus() {
+func (r Reindeers) printStatus() {
 	for name, reindeer := range r {
 		if reindeer.status.resting {
 			fmt.Printf("%s is resting for %d more seconds and has gone %d km\n", name, reindeer.status.restCounter, reindeer.status.distance)
@@ -114,7 +114,7 @@ func (r Reindeers) PrintStatus() {
 }
 
 func main() {
-	input, err := ReadStrings("input.txt")
+	input, err := readStrings("input.txt")
 	if err != nil {
 		fmt.Println(err.Error())
 		os.Exit(1)
@@ -122,13 +122,13 @@ func main() {
 	reindeers := Reindeers{}
 
 	for _, s := range input {
-		reindeers.ParseReindeer(s)
+		reindeers.parseReindeer(s)
 	}
 	for i := 1; i <= 2503; i++ {
-		reindeers.SecondLoop()
-		reindeers.CalculatePoints()
+		reindeers.secondLoop()
+		reindeers.calculatePoints()
 	}
-	reindeers.PrintStatus()
+	reindeers.printStatus()
 
 	maxDistance := 0
 	maxPoints := 0

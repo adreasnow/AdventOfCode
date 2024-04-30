@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func ReadStrings(fileName string) ([]string, error) {
+func readStrings(fileName string) ([]string, error) {
 	file, err := os.Open(fileName)
 	if err != nil {
 		return nil, err
@@ -29,7 +29,7 @@ func ReadStrings(fileName string) ([]string, error) {
 	return input, err
 }
 
-func SplitListByChar(l []string, delim string) []string {
+func splitListByChar(l []string, delim string) []string {
 	split := []string{}
 	for _, s := range l {
 		out := strings.Split(s, delim)
@@ -38,7 +38,7 @@ func SplitListByChar(l []string, delim string) []string {
 	return split
 }
 
-func RemoveRed(s string) string {
+func removeRed(s string) string {
 	var start int
 	out := s
 	object := false
@@ -108,7 +108,7 @@ func RemoveRed(s string) string {
 }
 
 func main() {
-	input, err := ReadStrings("input.txt")
+	input, err := readStrings("input.txt")
 	if err != nil {
 		fmt.Println(err.Error())
 		os.Exit(1)
@@ -116,13 +116,13 @@ func main() {
 
 	var out []string
 	inputLine := strings.Join(input, "")
-	inputLine = RemoveRed(inputLine)
+	inputLine = removeRed(inputLine)
 	out = strings.Split(inputLine, ":")
-	out = SplitListByChar(out, ",")
-	out = SplitListByChar(out, "[")
-	out = SplitListByChar(out, "]")
-	out = SplitListByChar(out, "{")
-	out = SplitListByChar(out, "}")
+	out = splitListByChar(out, ",")
+	out = splitListByChar(out, "[")
+	out = splitListByChar(out, "]")
+	out = splitListByChar(out, "{")
+	out = splitListByChar(out, "}")
 
 	sumTotal := 0
 	for _, s := range out {

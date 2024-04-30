@@ -26,7 +26,7 @@ So, in the example above, there are `4` **distinct** molecules (not five, becaus
 The machine replaces without regard for the surrounding characters. For example, given the string `H2O`, the transition `H => OO` would result in `OO2O`.
 
 Your puzzle input describes all of the possible replacements and, at the bottom, the medicine molecule for which you need to calibrate the machine. **How many distinct molecules can be created** after all the different ways you can do one replacement on the medicine molecule?
-#### Answer
+### Answer
 `535`
 
 ## Part 2
@@ -53,7 +53,7 @@ So, you could make `HOH` after *`3` steps*. Santa's favorite molecule, `HOHOHO`,
 
 How long will it take to make the medicine? Given the available *replacements* and the *medicine molecule* in your puzzle input, what is the *fewest number of steps* to go from `e` to the medicine molecule?
 
-#### Answer
+### Answer
 Yeah, look this one killed me so I took someone else's approach from reddit...
 See [../19-stolen](../19-stolen) for their solution.
 `212`

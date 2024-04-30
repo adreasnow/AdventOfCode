@@ -12,7 +12,7 @@ func TestRemoveIndex(t *testing.T) {
 	c := []string{"c", "e"}
 	input := [][]string{a, b, c}
 
-	output := RemoveIndex(input, b)
+	output := removeIndex(input, b)
 	expected := [][]string{a, c}
 
 	if !reflect.DeepEqual(output, expected) {
@@ -29,7 +29,7 @@ func TestGetLongestIndex(t *testing.T) {
 	d := []string{"e", "fffg"}
 	input := [][]string{a, b, c, d}
 
-	output, _ := GetLongestIndex(input)
+	output, _ := getLongestIndex(input)
 	expected := c
 
 	if !reflect.DeepEqual(output, expected) {

@@ -16,7 +16,7 @@ For example:
 
 How many strings are nice?
 
-#### Answer
+### Answer
 `255`
 
 ## Part 2
@@ -34,5 +34,5 @@ For example:
 
 How many strings are nice under these new rules?
 
-#### Answer
+### Answer
 `55`

@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func ReadStrings(fileName string) ([]string, error) {
+func readStrings(fileName string) ([]string, error) {
 	file, err := os.Open(fileName)
 	if err != nil {
 		return nil, err
@@ -130,7 +130,7 @@ func (g Grid) countLights() int {
 type Grid [102][102]bool
 
 func main() {
-	initial, err := ReadStrings("input.txt")
+	initial, err := readStrings("input.txt")
 	if err != nil {
 		fmt.Print(err.Error())
 		os.Exit(1)

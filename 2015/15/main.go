@@ -23,7 +23,7 @@ type Recipe struct {
 	calories    int
 }
 
-func ReadStrings(fileName string) ([]string, error) {
+func readStrings(fileName string) ([]string, error) {
 	file, err := os.Open(fileName)
 	if err != nil {
 		return nil, err
@@ -44,7 +44,7 @@ func ReadStrings(fileName string) ([]string, error) {
 	return input, err
 }
 
-func (ingredients *Ingredients) ParseIngredient(s string) {
+func (ingredients *Ingredients) parseIngredient(s string) {
 	var name string
 	ingredient := Ingredient{}
 
@@ -63,7 +63,7 @@ func (ingredients *Ingredients) ParseIngredient(s string) {
 
 }
 
-func (r *Recipe) CalculateScore() {
+func (r *Recipe) calculateScore() {
 	totalCapacity, totalDurability, totalFlavour, totalTexture, totalCalories := 0, 0, 0, 0, 0
 
 	for ingredient, quantity := range r.ingredients {
@@ -82,7 +82,7 @@ func (r *Recipe) CalculateScore() {
 	(*r).calories = totalCalories
 }
 
-func GeneratePermutations() [][4]int {
+func generatePermutations() [][4]int {
 	var i, j, k, l int
 	perms := make([][4]int, 0)
 	for i = 0; i < 100; i++ {
@@ -102,17 +102,17 @@ func GeneratePermutations() [][4]int {
 func main() {
 	ingredients := Ingredients{}
 
-	input, err := ReadStrings("input.txt")
+	input, err := readStrings("input.txt")
 	if err != nil {
 		fmt.Println(err.Error())
 		os.Exit(1)
 	}
 
 	for _, s := range input {
-		ingredients.ParseIngredient(s)
+		ingredients.parseIngredient(s)
 	}
 
-	perms := GeneratePermutations()
+	perms := generatePermutations()
 	i := 0
 	maxScore := 0
 	_500CalList := make([]Recipe, 0)
@@ -126,7 +126,7 @@ func main() {
 			i++
 		}
 
-		r.CalculateScore()
+		r.calculateScore()
 		if r.calories == 500 {
 			_500CalList = append(_500CalList, r)
 		}

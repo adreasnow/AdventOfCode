@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func ReadStrings(fileName string) ([]string, error) {
+func readStrings(fileName string) ([]string, error) {
 	file, err := os.Open(fileName)
 	if err != nil {
 		return nil, err
@@ -28,7 +28,7 @@ func ReadStrings(fileName string) ([]string, error) {
 	return input, err
 }
 
-func ProcessStrings(s []string) (map[string][]string, string) {
+func processStrings(s []string) (map[string][]string, string) {
 	replacements := make(map[string][]string, 0)
 	var key string
 	var change string
@@ -50,7 +50,7 @@ type Substitution struct {
 	changes  int
 }
 
-func DoSubstitution(replacements map[string][]string, s_chan chan Substitution, quit chan int, e_chan chan Substitution) {
+func doSubstitution(replacements map[string][]string, sChan chan Substitution, quit chan int, eChan chan Substitution) {
 	var kernel string
 	var j int
 	var replacements_list []string
@@ -60,7 +60,7 @@ func DoSubstitution(replacements map[string][]string, s_chan chan Substitution, 
 
 	for {
 		select {
-		case m := <-s_chan:
+		case m := <-sChan:
 			mol_len = len(m.molecule)
 
 			for j = range mol_len { // 0 - n
@@ -77,11 +77,11 @@ func DoSubstitution(replacements map[string][]string, s_chan chan Substitution, 
 								if len(nm.molecule) <= smallest {
 									fmt.Println(len(nm.molecule), smallest)
 									if substituted == "e" {
-										e_chan <- nm
+										eChan <- nm
 									} else {
 										fmt.Println(nm)
 										smallest = len(nm.molecule)
-										s_chan <- nm
+										sChan <- nm
 									}
 								}
 							}
@@ -95,11 +95,11 @@ func DoSubstitution(replacements map[string][]string, s_chan chan Substitution, 
 	}
 }
 
-func EHandler(e_chan chan Substitution, quit chan int) {
+func eHandler(eChan chan Substitution, quit chan int) {
 	for {
 		select {
-		case e := <-e_chan:
-			e_list = append(e_list, e)
+		case e := <-eChan:
+			eList = append(eList, e)
 			unique["e"] = true
 			fmt.Println(e)
 		case <-quit:
@@ -108,9 +108,9 @@ func EHandler(e_chan chan Substitution, quit chan int) {
 	}
 }
 
-// func CalculateSubstitutions(replacements map[string][]string, molecule string) ([]Substitution, map[string]bool, Substitution) {
-func CalculateSubstitutions(replacements map[string][]string, molecule string) {
-	s_chan := make(chan Substitution, 99999999999)
+// func calculateSubstitutions(replacements map[string][]string, molecule string) ([]Substitution, map[string]bool, Substitution) {
+func calculateSubstitutions(replacements map[string][]string, molecule string) {
+	sChan := make(chan Substitution, 99999999999)
 	quit := make(chan int, 100)
 	e_chan := make(chan Substitution)
 	smallest = len(molecule)
@@ -118,12 +118,12 @@ func CalculateSubstitutions(replacements map[string][]string, molecule string) {
 	unique := make(map[string]bool, 0)
 	unique["e"] = false
 	ue := false
-	e_list = make([]Substitution, 0)
+	eList = make([]Substitution, 0)
 
-	s_chan <- Substitution{molecule, 0, 0}
-	go EHandler(e_chan, quit)
+	sChan <- Substitution{molecule, 0, 0}
+	go eHandler(e_chan, quit)
 	for range 1000 {
-		go DoSubstitution(replacements, s_chan, quit, e_chan)
+		go doSubstitution(replacements, sChan, quit, e_chan)
 	}
 	for !ue {
 		time.Sleep(time.Second)
@@ -137,20 +137,20 @@ func CalculateSubstitutions(replacements map[string][]string, molecule string) {
 }
 
 // var unique map[string]bool
-var e_list []Substitution
+var eList []Substitution
 var unique map[string]bool
 var smallest int
 
 func main() {
-	input, err := ReadStrings("input.txt")
+	input, err := readStrings("input.txt")
 	if err != nil {
 		fmt.Println(err.Error())
 		os.Exit(1)
 	}
 
-	replacements, molecule := ProcessStrings(input)
-	CalculateSubstitutions(replacements, molecule)
-	fmt.Println(e_list)
+	replacements, molecule := processStrings(input)
+	calculateSubstitutions(replacements, molecule)
+	fmt.Println(eList)
 
 	// fmt.Printf("It took %d steps to get to 'e'\n", e.changes)
 }

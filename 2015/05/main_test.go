@@ -92,13 +92,13 @@ func TestCheckRepeatWOOverlap(t *testing.T) {
 	PassTestCases := []string{"xyxy",
 		"aabcdefgaa"}
 	for _, s := range PassTestCases {
-		if !CheckRepeatWOOverlap(s) {
+		if !checkRepeatWOOverlap(s) {
 			t.Errorf("failed %s", s)
 		}
 	}
 	FailTestCases := []string{"aaa"} // only one vowel
 	for _, s := range FailTestCases {
-		if CheckRepeatWOOverlap(s) {
+		if checkRepeatWOOverlap(s) {
 			t.Errorf("did not fail %s", s)
 		}
 	}
@@ -109,7 +109,7 @@ func TestCheckRepeatWInbetween(t *testing.T) {
 		"abcdefeghi",
 		"aaa"}
 	for _, s := range PassTestCases {
-		if !CheckRepeatWInbetween(s) {
+		if !checkRepeatWInbetween(s) {
 			t.Errorf("failed %s", s)
 		}
 	}
@@ -127,14 +127,14 @@ func TestCheckStrings(t *testing.T) {
 	PassTestCases := []string{"qjhvhtzxzqqjkmpb",
 		"xxyxx"}
 	for _, s := range PassTestCases {
-		if !CheckString(s) {
+		if !checkString(s) {
 			t.Errorf("failed %s", s)
 		}
 	}
 	FailTestCases := []string{"uurcxstgmygtbstg", // no repeat with a single letter between them
 		"ieodomkazucvgmuy"} // no pair that appears twice
 	for _, s := range FailTestCases {
-		if CheckString(s) {
+		if checkString(s) {
 			t.Errorf("did not fail %s", s)
 		}
 	}

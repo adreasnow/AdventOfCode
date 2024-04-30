@@ -27,10 +27,10 @@ func (e *Elves) Get(elf int) int {
 	return e.elves[elf]
 }
 
-func CalculatePresents(n_chan chan int, house_chan chan House, quit chan int, elves *Elves) {
+func calculatePresents(nChan chan int, houseChan chan House, quit chan int, elves *Elves) {
 	for {
 		select {
-		case n := <-n_chan:
+		case n := <-nChan:
 			presents := 0
 			for elf := 1; elf <= n/2; elf++ {
 				if n%elf == 0 && elves.Get(elf) < 50 {
@@ -41,25 +41,23 @@ func CalculatePresents(n_chan chan int, house_chan chan House, quit chan int, el
 			presents += n * 11
 			elves.Increment(n)
 
-			house_chan <- House{n, presents}
+			houseChan <- House{n, presents}
 		case <-quit:
 			return
 		}
 	}
 }
 
-func PresentsChecker(house_chan chan House, quit chan int, complete *bool, input int) {
+func presentsChecker(houseChan chan House, quit chan int, complete *bool, input int) {
 	for {
-		select {
-		case house := <-house_chan:
-			fmt.Println(house.house, ": ", house.presents)
-			if house.presents >= input {
-				*complete = true
-				fmt.Printf("The first house to get %d presents is %d", input, house.house)
-				for range 20 {
-					quit <- 1
-					return
-				}
+		house := <-houseChan
+		fmt.Println(house.house, ": ", house.presents)
+		if house.presents >= input {
+			*complete = true
+			fmt.Printf("The first house to get %d presents is %d", input, house.house)
+			for range 20 {
+				quit <- 1
+				return
 			}
 		}
 	}
@@ -78,10 +76,10 @@ func main() {
 
 	var complete bool
 
-	go PresentsChecker(house_chan, quit, &complete, input)
+	go presentsChecker(house_chan, quit, &complete, input)
 
 	for range 20 {
-		go CalculatePresents(n_chan, house_chan, quit, &elves)
+		go calculatePresents(n_chan, house_chan, quit, &elves)
 	}
 
 	for !complete {

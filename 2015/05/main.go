@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func ReadStrings(fileName string) ([]string, error) {
+func readStrings(fileName string) ([]string, error) {
 	file, err := os.Open(fileName)
 	if err != nil {
 		return nil, err
@@ -27,7 +27,7 @@ func ReadStrings(fileName string) ([]string, error) {
 	return input, err
 }
 
-// func CheckVowels(s string) bool {
+// func checkVowels(s string) bool {
 // 	vowels := map[rune]int{'a': 1, 'e': 1, 'i': 1, 'o': 1, 'u': 1}
 // 	sum := 0
 // 	for _, char := range s {
@@ -37,7 +37,7 @@ func ReadStrings(fileName string) ([]string, error) {
 
 // }
 
-// func CheckDoubles(s string) bool {
+// func checkDoubles(s string) bool {
 // 	prev := '-'
 // 	for _, char := range s {
 // 		if char == prev {
@@ -49,7 +49,7 @@ func ReadStrings(fileName string) ([]string, error) {
 // 	return false
 // }
 
-// func CheckBads(s string) bool {
+// func checkBads(s string) bool {
 // 	if strings.Contains(s, "ab") || strings.Contains(s, "cd") || strings.Contains(s, "pq") || strings.Contains(s, "xy") {
 // 		return false
 // 	}
@@ -57,14 +57,14 @@ func ReadStrings(fileName string) ([]string, error) {
 // }
 
 // func CheckString(s string) bool {
-// 	if CheckVowels(s) && CheckDoubles(s) && CheckBads(s) {
+// 	if checkVowels(s) && checkDoubles(s) && checkBads(s) {
 // 		return true
 // 	} else {
 // 		return false
 // 	}
 // }
 
-func CheckRepeatWOOverlap(s string) bool {
+func checkRepeatWOOverlap(s string) bool {
 	pairs := make(map[string]int, 0)
 	prev := '-'
 	pair := ""
@@ -83,7 +83,7 @@ func CheckRepeatWOOverlap(s string) bool {
 	return false
 }
 
-func CheckRepeatWInbetween(s string) bool {
+func checkRepeatWInbetween(s string) bool {
 	prevprev := '-'
 	prev := '-'
 	for _, char := range s {
@@ -97,8 +97,8 @@ func CheckRepeatWInbetween(s string) bool {
 	return false
 }
 
-func CheckString(s string) bool {
-	if CheckRepeatWOOverlap(s) && CheckRepeatWInbetween(s) {
+func checkString(s string) bool {
+	if checkRepeatWOOverlap(s) && checkRepeatWInbetween(s) {
 		return true
 	} else {
 		return false
@@ -106,13 +106,13 @@ func CheckString(s string) bool {
 }
 
 func main() {
-	strings, err := ReadStrings("input.txt")
+	strings, err := readStrings("input.txt")
 	niceCount := 0
 	if err != nil {
 		fmt.Println(err.Error())
 	} else {
 		for _, s := range strings {
-			if CheckString(s) {
+			if checkString(s) {
 				niceCount++
 			}
 		}

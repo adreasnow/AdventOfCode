@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func ReadStrings(fileName string) ([]string, error) {
+func readStrings(fileName string) ([]string, error) {
 	file, err := os.Open(fileName)
 	if err != nil {
 		return nil, err
@@ -29,7 +29,7 @@ func ReadStrings(fileName string) ([]string, error) {
 	return input, err
 }
 
-func ScanForHex(s string) string {
+func scanForHex(s string) string {
 	escapes := strings.Count(s, "\\")
 	for i := 0; i <= escapes; i++ {
 		for count, char := range s {
@@ -47,9 +47,9 @@ func ScanForHex(s string) string {
 	return s
 }
 
-func Decode(s string) string {
+func decode(s string) string {
 	s = s[1 : len(s)-1]
-	s = ScanForHex(s)
+	s = scanForHex(s)
 
 	s = strings.Replace(s, "\\\\", "|", -1)
 	s = strings.Replace(s, "\\\"", "\"", -1)
@@ -57,7 +57,7 @@ func Decode(s string) string {
 	return s
 }
 
-func Encode(s string) string {
+func encode(s string) string {
 	s = strings.Replace(s, "\\", "\\\\", -1)
 	s = strings.Replace(s, "\"", "\\\"", -1)
 
@@ -66,7 +66,7 @@ func Encode(s string) string {
 }
 
 func main() {
-	strings, err := ReadStrings("input.txt")
+	strings, err := readStrings("input.txt")
 	codeChars := 0
 	memChars := 0
 	encodedChars := 0
@@ -80,12 +80,12 @@ func main() {
 	} else {
 		for _, s = range strings {
 			codeChars += len(s)
-			decoded = Decode(s)
+			decoded = decode(s)
 			memChars += len(decoded)
 		}
 
 		for _, s = range strings {
-			encoded = Encode(s)
+			encoded = encode(s)
 			encodedChars += len(encoded)
 		}
 
@@ -93,7 +93,7 @@ func main() {
 			"\"abc\"",
 			"\"aaa\\\"aaa\"",
 			"\"\\x27\""} {
-			fmt.Println(Encode(s))
+			fmt.Println(encode(s))
 		}
 
 		fmt.Printf("\nPart A\n----------\nCode: %d\nDecoded: %d\nDifference: %d", codeChars, memChars, codeChars-memChars)

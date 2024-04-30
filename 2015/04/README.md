@@ -12,11 +12,11 @@ If your secret key is `pqrstuv`, the lowest number it combines with to make an M
 
 Your puzzle input is `bgvyzdsv`.
 
-#### Answer
+### Answer
 `254575`
 
 ## Part 2
 Now find one that starts with six zeroes.
 
-#### Answer
+### Answer
 `1038736`

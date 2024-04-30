@@ -21,7 +21,7 @@ For example:
 `)))` and `)())())` both result in floor -3.
 To what floor do the instructions take Santa?
 
-#### Answer
+### Answer
 `138`
 
 ## Part 2
@@ -33,5 +33,5 @@ For example:
 `()())` causes him to enter the basement at character position 5.
 What is the position of the character that causes Santa to first enter the basement?
 
-#### Answer
+### Answer
 `1771`

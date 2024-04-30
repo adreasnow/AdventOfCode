@@ -3,12 +3,12 @@ package main
 import "testing"
 
 func TestNextRune(t *testing.T) {
-	newRune, wrap := NextRune('g')
+	newRune, wrap := nextRune('g')
 	if newRune != 'h' || wrap != false {
 		t.Errorf("Rune of 'g' did not increment to 'h'")
 	}
 
-	newRune, wrap = NextRune('z')
+	newRune, wrap = nextRune('z')
 	if newRune != 'a' || wrap != true {
 		t.Errorf("Rune of 'z' did not wrap to 'a'")
 	}
@@ -22,7 +22,7 @@ func TestNextString(t *testing.T) {
 		"addezzzz": "addfaaaa",
 	}
 	for s, expected := range tests {
-		if NextString(s) != expected {
+		if nextString(s) != expected {
 			t.Errorf("%s did not match expectation of %v", s, expected)
 		}
 	}
@@ -38,7 +38,7 @@ func TestContainsThreeLetterRun(t *testing.T) {
 		"hepyyzaa": false,
 	}
 	for s, expected := range tests {
-		if ContainsThreeLetterRun(s) != expected {
+		if containsThreeLetterRun(s) != expected {
 			t.Errorf("%s did not match expectation of %v", s, expected)
 		}
 	}
@@ -53,7 +53,7 @@ func TestDoesNotContain(t *testing.T) {
 		"hepyyzaa": true,
 	}
 	for s, expected := range tests {
-		if DoesNotContain(s) != expected {
+		if doesNotContain(s) != expected {
 			t.Errorf("%s did not match expectation of %v", s, expected)
 		}
 	}
@@ -72,7 +72,7 @@ func TestTwoNonOverlappingPairs(t *testing.T) {
 		"hepyyzaa": true,
 	}
 	for s, expected := range tests {
-		if TwoNonOverlappingPairs(s) != expected {
+		if twoNonOverlappingPairs(s) != expected {
 			t.Errorf("%s did not match expectation of %v", s, expected)
 		}
 	}
@@ -84,7 +84,7 @@ func TestCheckString(t *testing.T) {
 		"hepyyzaa": false,
 	}
 	for s, expected := range tests {
-		if CheckString(s) != expected {
+		if checkString(s) != expected {
 			t.Errorf("%s did not match expectation of %v", s, expected)
 		}
 	}
@@ -95,7 +95,7 @@ func TestNextPassword(t *testing.T) {
 		"ghijklmn": "ghjaabcc",
 	}
 	for s, expected := range tests {
-		recieved := NextPassword(s)
+		recieved := nextPassword(s)
 		if recieved != expected {
 			t.Errorf("%s did not match expectation of %v, and instead gave %s", s, expected, recieved)
 		}

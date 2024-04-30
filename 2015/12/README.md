@@ -20,7 +20,7 @@ You will not encounter any strings containing numbers.
 
 What is the sum of all numbers in the document?
 
-#### Answer
+### Answer
 `111754`
 
 ## Part 2
@@ -33,5 +33,5 @@ Ignore any object (and all of its children) which has any property with the valu
 - `{"d":"red","e":[1,2,3,4],"f":5}` now has a sum of `0`, because the entire structure is ignored.
 - `[1,"red",5]` has a sum of 6, because "red" in an array has no effect.
 
-#### Answer
+### Answer
 `65402`

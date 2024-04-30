@@ -18,7 +18,7 @@ Disregarding the whitespace in the file, what is the number of characters of cod
 
 For example, given the four strings above, the total number of characters of string code (`2 + 5 + 10 + 6 = 23`) minus the total number of characters in memory for string values (`0 + 3 + 7 + 1 = 11`) is `23 - 11 = 12`.
 
-#### Answer
+### Answer
 `1371`
 
 ## Part 2
@@ -33,5 +33,5 @@ For example:
 
 Your task is to find the total number of characters to represent the newly encoded strings minus the number of characters of code in each original string literal. For example, for the strings above, the total encoded length (`6 + 9 + 16 + 11 = 42`) minus the characters in the original code representation (`23`, just like in the first part of this puzzle) is `42 - 23 = 19`.
 
-#### Answer
+### Answer
 `2117`

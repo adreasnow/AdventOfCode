@@ -10,7 +10,7 @@ For example, suppose you have containers of size `20`, `15`, `10`, `5`, and `5` 
 `15`, `5`, and `5`
 Filling all containers entirely, how many different **combinations of containers can** exactly fit all `150` liters of eggnog?
 
-#### Answer
+### Answer
 `1304`
 
 ## Part 2
@@ -20,5 +20,5 @@ Find the minimum number of containers that can exactly fit all 150 liters of egg
 
 In the example above, the minimum number of containers was two. There were three ways to use that many containers, and so the answer there would be `3`.
 
-#### Answer
+### Answer
 `18`

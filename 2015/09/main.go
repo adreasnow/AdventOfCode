@@ -9,7 +9,7 @@ import (
 	"github.com/mowshon/iterium"
 )
 
-func ReadStrings(fileName string) ([]string, error) {
+func readStrings(fileName string) ([]string, error) {
 	file, err := os.Open(fileName)
 	if err != nil {
 		return nil, err
@@ -40,7 +40,7 @@ type Path struct {
 type Cities map[string]City
 type Paths map[Path]int
 
-func AddPath(s1 string, s2 string, d int) {
+func addPath(s1 string, s2 string, d int) {
 	var ok bool
 	_, ok = cities[s1]
 	if !ok {
@@ -55,7 +55,7 @@ func AddPath(s1 string, s2 string, d int) {
 	paths[Path{cities[s2], cities[s1]}] = d
 }
 
-func CalculateDistance(p []string) int {
+func calculateDistance(p []string) int {
 	distance := 0
 	for i := range p {
 		if i != len(p)-1 {
@@ -73,7 +73,7 @@ func main() {
 	cities = Cities{}
 	paths = Paths{}
 
-	strings, err := ReadStrings("input.txt")
+	strings, err := readStrings("input.txt")
 	if err != nil {
 		fmt.Println(err.Error())
 	} else {
@@ -82,7 +82,7 @@ func main() {
 			var d int
 
 			fmt.Sscanf(s, "%s to %s = %d", &s1, &s2, &d)
-			AddPath(s1, s2, d)
+			addPath(s1, s2, d)
 		}
 
 		cityNames := make([]string, 0)
@@ -93,7 +93,7 @@ func main() {
 
 		distances := make([]int, 0)
 		for _, p := range permutations {
-			distances = append(distances, CalculateDistance(p))
+			distances = append(distances, calculateDistance(p))
 		}
 		fmt.Printf("Part A\nThe shortest path is %d\n\n", slices.Min(distances))
 		fmt.Printf("Part B\nThe longest path is %d\n", slices.Max(distances))

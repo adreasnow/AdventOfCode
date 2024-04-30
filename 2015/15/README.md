@@ -28,7 +28,7 @@ Multiplying these together (`68 * 80 * 152 * 76`, ignoring `calories` for now) r
 
 Given the ingredients in your kitchen and their properties, what is the **total score** of the highest-scoring cookie you can make?
 
-#### Answer
+### Answer
 `18965440`
 
 ## Part 2
@@ -38,5 +38,5 @@ For example, given the ingredients above, if you had instead selected `40` teasp
 
 Given the ingredients in your kitchen and their properties, what is the total score of the highest-scoring cookie you can make with a calorie total of `500`?
 
-#### Answer
+### Answer
 `15862900`

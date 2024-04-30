@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-func ReadStrings(fileName string) ([]int, error) {
+func readStrings(fileName string) ([]int, error) {
 	file, err := os.Open(fileName)
 	if err != nil {
 		return nil, err
@@ -33,7 +33,7 @@ func ReadStrings(fileName string) ([]int, error) {
 }
 
 // Lets have some fun and writre a binary adder manually :)
-func BinCountUp(b []bool) []bool {
+func binCountUp(b []bool) []bool {
 	carry := false
 	add := make([]bool, len(b))
 	add[0] = true
@@ -62,7 +62,7 @@ func BinCountUp(b []bool) []bool {
 	return b
 }
 
-func SumBoolSlice(s []bool) int {
+func sumBoolSlice(s []bool) int {
 	total := 0
 	for _, check := range s {
 		if check {
@@ -72,11 +72,11 @@ func SumBoolSlice(s []bool) int {
 	return total
 }
 
-func GeneratePermutations(n int) [][]bool {
+func generatePermutations(n int) [][]bool {
 	permutations := make([][]bool, 0)
 	perm := make([]bool, n)
-	for SumBoolSlice(perm) != len(perm) {
-		perm := BinCountUp(perm)
+	for sumBoolSlice(perm) != len(perm) {
+		perm := binCountUp(perm)
 		permutations = append(permutations, []bool{})
 		// Go really doesn't like this, but I don't know how else to get it to append the values and not the reference
 		for _, i := range perm {
@@ -86,7 +86,7 @@ func GeneratePermutations(n int) [][]bool {
 	return permutations
 }
 
-func CountCombinations(perms [][]bool, buckets []int) int {
+func countCombinations(perms [][]bool, buckets []int) int {
 	var total int
 	minContainers := len(buckets)
 
@@ -102,8 +102,8 @@ func CountCombinations(perms [][]bool, buckets []int) int {
 		}
 		if total == 150 {
 			count++
-			if SumBoolSlice(perm) < minContainers {
-				minContainers = SumBoolSlice(perm)
+			if sumBoolSlice(perm) < minContainers {
+				minContainers = sumBoolSlice(perm)
 			}
 		}
 	}
@@ -114,7 +114,7 @@ func CountCombinations(perms [][]bool, buckets []int) int {
 				total += buckets[i]
 			}
 		}
-		if total == 150 && SumBoolSlice(perm) == minContainers {
+		if total == 150 && sumBoolSlice(perm) == minContainers {
 			minCount++
 		}
 	}
@@ -123,13 +123,13 @@ func CountCombinations(perms [][]bool, buckets []int) int {
 
 func main() {
 
-	buckets, err := ReadStrings("input.txt")
+	buckets, err := readStrings("input.txt")
 	if err != nil {
 		fmt.Println(err.Error())
 		os.Exit(1)
 	}
-	perms := GeneratePermutations(len(buckets))
-	combinations := CountCombinations(perms, buckets)
+	perms := generatePermutations(len(buckets))
+	combinations := countCombinations(perms, buckets)
 	fmt.Printf("There are %d combinations of containers that add up to 150L with the smallest number of containers", combinations)
 
 }
