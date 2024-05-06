@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"context"
 	"fmt"
 	"os"
 	"time"
@@ -50,7 +51,7 @@ type Substitution struct {
 	changes  int
 }
 
-func doSubstitution(replacements map[string][]string, sChan chan Substitution, quit chan int, eChan chan Substitution) {
+func doSubstitution(replacements map[string][]string, sChan chan Substitution, eChan chan Substitution, ctx context.Context) {
 	var kernel string
 	var j int
 	var replacements_list []string
@@ -89,20 +90,20 @@ func doSubstitution(replacements map[string][]string, sChan chan Substitution, q
 					}
 				}
 			}
-		case <-quit:
+		case <-ctx.Done():
 			return
 		}
 	}
 }
 
-func eHandler(eChan chan Substitution, quit chan int) {
+func eHandler(eChan chan Substitution, ctx context.Context) {
 	for {
 		select {
 		case e := <-eChan:
 			eList = append(eList, e)
 			unique["e"] = true
 			fmt.Println(e)
-		case <-quit:
+		case <-ctx.Done():
 			return
 		}
 	}
@@ -110,8 +111,8 @@ func eHandler(eChan chan Substitution, quit chan int) {
 
 // func calculateSubstitutions(replacements map[string][]string, molecule string) ([]Substitution, map[string]bool, Substitution) {
 func calculateSubstitutions(replacements map[string][]string, molecule string) {
+	ctx, cancel := context.WithCancel(context.Background())
 	sChan := make(chan Substitution, 99999999999)
-	quit := make(chan int, 100)
 	e_chan := make(chan Substitution)
 	smallest = len(molecule)
 
@@ -121,19 +122,16 @@ func calculateSubstitutions(replacements map[string][]string, molecule string) {
 	eList = make([]Substitution, 0)
 
 	sChan <- Substitution{molecule, 0, 0}
-	go eHandler(e_chan, quit)
+	go eHandler(e_chan, ctx)
 	for range 1000 {
-		go doSubstitution(replacements, sChan, quit, e_chan)
+		go doSubstitution(replacements, sChan, e_chan, ctx)
 	}
 	for !ue {
 		time.Sleep(time.Second)
 		ue = unique["e"]
 	}
 	fmt.Println("Killing Goroutines")
-	for range 600 {
-		quit <- 0
-	}
-	// time.Sleep(5 * time.Second)
+	cancel()
 }
 
 // var unique map[string]bool

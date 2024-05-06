@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"sync"
 )
@@ -27,7 +28,7 @@ func (e *Elves) Get(elf int) int {
 	return e.elves[elf]
 }
 
-func calculatePresents(nChan chan int, houseChan chan House, quit chan int, elves *Elves) {
+func calculatePresents(nChan chan int, houseChan chan House, elves *Elves, ctx context.Context) {
 	for {
 		select {
 		case n := <-nChan:
@@ -42,23 +43,8 @@ func calculatePresents(nChan chan int, houseChan chan House, quit chan int, elve
 			elves.Increment(n)
 
 			houseChan <- House{n, presents}
-		case <-quit:
+		case <-ctx.Done():
 			return
-		}
-	}
-}
-
-func presentsChecker(houseChan chan House, quit chan int, complete *bool, input int) {
-	for {
-		house := <-houseChan
-		fmt.Println(house.house, ": ", house.presents)
-		if house.presents >= input {
-			*complete = true
-			fmt.Printf("The first house to get %d presents is %d", input, house.house)
-			for range 20 {
-				quit <- 1
-				return
-			}
 		}
 	}
 }
@@ -72,14 +58,26 @@ func main() {
 
 	n_chan := make(chan int, 100)
 	house_chan := make(chan House, 100)
-	quit := make(chan int, 100)
 
 	var complete bool
 
-	go presentsChecker(house_chan, quit, &complete, input)
+	ctx, cancel := context.WithCancel(context.Background())
+
+	go func(houseChan chan House, complete *bool, input int, cancel context.CancelFunc) {
+		for {
+			house := <-houseChan
+			fmt.Println(house.house, ": ", house.presents)
+			if house.presents >= input {
+				cancel()
+				*complete = true
+				fmt.Printf("The first house to get %d presents is %d\n", input, house.house)
+
+			}
+		}
+	}(house_chan, &complete, input, cancel)
 
 	for range 20 {
-		go calculatePresents(n_chan, house_chan, quit, &elves)
+		go calculatePresents(n_chan, house_chan, &elves, ctx)
 	}
 
 	for !complete {
