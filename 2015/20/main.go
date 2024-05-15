@@ -63,18 +63,21 @@ func main() {
 
 	ctx, cancel := context.WithCancel(context.Background())
 
-	go func(houseChan chan House, complete *bool, input int, cancel context.CancelFunc) {
-		for {
-			house := <-houseChan
-			fmt.Println(house.house, ": ", house.presents)
-			if house.presents >= input {
-				cancel()
-				*complete = true
-				fmt.Printf("The first house to get %d presents is %d\n", input, house.house)
-
+	go func(houseChan chan House, complete *bool, input int, cancel context.CancelFunc, ctx context.Context) {
+		for{
+			select {
+			case house := <-houseChan:
+				fmt.Println(house.house, ": ", house.presents)
+				if house.presents >= input {
+					cancel()
+					*complete = true
+					fmt.Printf("The first house to get %d presents is %d\n", input, house.house)
+				}
+				case <-ctx.Done():
+					return
 			}
 		}
-	}(house_chan, &complete, input, cancel)
+	}(house_chan, &complete, input, cancel, ctx)
 
 	for range 20 {
 		go calculatePresents(n_chan, house_chan, &elves, ctx)
