@@ -4,7 +4,7 @@ go 1.22.4
 
 require (
 	github.com/mowshon/iterium v1.0.0
-	github.com/stretchr/testify v1.8.2
+	github.com/stretchr/testify v1.9.0
 )
 
 require (
