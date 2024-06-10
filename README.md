@@ -35,7 +35,7 @@ At the moment I'm doing them in golang, simply because I really enjoy using the 
 | Day 19        |   <a href="2015/19/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a>    | :white_check_mark: |                    |                 Context                  |
 | Day 19-stolen | <a href="2015/19-stolen/main.go"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> |                    | :white_check_mark: |                                          |
 | Day 20        |    <a href="2015/20/main.go"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a>     | :white_check_mark: | :white_check_mark: | Mutex (so fkn proud of myself) + Context |
-| Day 21        |    <a href="2015/21/main.go"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a>     |  |  | Keep It Simple Stupid |
+| Day 21        |    <a href="2015/21/main.go"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> | :white_check_mark: |  | Keep It Simple Stupid |
 | Day 22        |                                                                                                   |                    |                    |                                          |
 | Day 23        |                                                                                                   |                    |                    |                                          |
 | Day 24        |                                                                                                   |                    |                    |                                          |
