@@ -10,7 +10,7 @@ At the moment I'm doing them in golang, simply because I really enjoy using the 
 
 ### 2015
 
-![](<https://img.shields.io/badge/stars%20(2015)%20⭐-40-yellow>)<br/>![](<https://img.shields.io/badge/days%20(2015)-20-red>)
+![](<https://img.shields.io/badge/stars%20(2015)%20⭐-42-yellow>)<br/>![](<https://img.shields.io/badge/days%20(2015)-21-red>)
 
 |               |                                             Language                                              |      Threaded      |       Tests        |                 Special                  |
 | :------------ | :-----------------------------------------------------------------------------------------------: | :----------------: | :----------------: | :--------------------------------------: |
