@@ -214,19 +214,18 @@ func main() {
 	runChan := make(chan bool)
 	ctx, done := context.WithCancel(context.Background())
 
-	for range 300 {
+	for range 20 {
 		go func(gameChan chan []string, manaChan chan int, runChan chan bool, ctx context.Context) {
 			for {
 				select {
 				case game := <-gameChan:
 					state, win, turns, err := play(game)
-
+					runChan <- true
 					if err == nil {
 						if win {
 							fmt.Printf("mana: %d, win: %v, turns: %d\n", state.ManaSpent, win, turns)
 							// state.PrintLog()
 							manaChan <- state.ManaSpent
-							runChan <- true
 						}
 					}
 
@@ -253,18 +252,16 @@ func main() {
 			select {
 			case <-ctx.Done():
 				return
-
 			default:
 				count := 0
-				for range time.Tick(time.Second * 1) {
-					fmt.Println("test")
-
+				finish := time.Now().Add(time.Second * 10)
+				for !time.Now().After(finish) {
 					select {
 					case <-runChan:
 						count++
 					}
 				}
-				fmt.Printf("Running at %d games/s", count)
+				fmt.Printf("Running at %d games/s\n", count/10)
 			}
 		}
 	}(runChan, ctx)
