@@ -10,7 +10,7 @@ At the moment I'm doing them in golang, simply because I really enjoy using the 
 
 ### 2015
 
-![](<https://img.shields.io/badge/stars%20(2015)%20⭐-42-yellow>)<br/>![](<https://img.shields.io/badge/days%20(2015)-21-red>)
+![](<https://img.shields.io/badge/Stars%20(2015)%20⭐-42-yellow>)<br/>![](<https://img.shields.io/badge/Days%20(2015)-21-red>)
 
 |               |                                             Language                                              |      Threaded      |       Tests        |                 Special                  |
 | :------------ | :-----------------------------------------------------------------------------------------------: | :----------------: | :----------------: | :--------------------------------------: |
@@ -43,7 +43,7 @@ At the moment I'm doing them in golang, simply because I really enjoy using the 
 
 ### 2016
 
-![](<https://img.shields.io/badge/stars%20(2016)%20⭐-0-yellow>)<br/>![](<https://img.shields.io/badge/days%20(2016)-0-red>)
+![](<https://img.shields.io/badge/Stars%20(2016)%20⭐-0-yellow>)<br/>![](<https://img.shields.io/badge/Days%20(2016)-0-red>)
 
 |        | Language | Threaded | Tests | Special |
 | :----- | :------: | :------: | :---: | :-----: |
