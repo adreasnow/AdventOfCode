@@ -1,31 +1,45 @@
 package main
 
-import (
-	"bufio"
-	"os"
-)
+import "fmt"
 
-func readStrings(fileName string) ([]string, error) {
-	file, err := os.Open(fileName)
-	if err != nil {
-		return nil, err
-	}
-
-	defer file.Close()
-
-	input := make([]string, 0)
-	scanner := bufio.NewScanner(file)
-
-	for scanner.Scan() {
-		input = append(input, scanner.Text())
-	}
-
-	if err := scanner.Err(); err != nil {
-		return nil, err
-	}
-	return input, err
+type Registers struct {
+	a uint
+	b uint
 }
 
-func main() {
+const (
+	a Register = "a"
+	b          = "b"
+)
 
+type Pointer uint
+type Register string
+type Instructions []func()
+
+func (i *Instructions) add(f func()) {
+	*i = append(*i, f)
+}
+
+func (i Instructions) run() {
+	for int(pointer) <= len(i)-1 {
+		i[pointer]()
+	}
+}
+
+var registers Registers
+var pointer Pointer
+var debug bool
+
+func main() {
+	debug = false
+	// debug = true
+
+	registers = Registers{1, 0}
+	pointer = 0
+
+	i := Instructions{}
+
+	i.parseInput()
+	i.run()
+	fmt.Printf("Tape has finished. Register b = %v", registers.b)
 }
