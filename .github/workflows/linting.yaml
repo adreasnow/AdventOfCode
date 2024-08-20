@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
       - name: MegaLinter
         id: megalinter
-        uses: oxsecurity/megalinter/flavors/go@v7
+        uses: oxsecurity/megalinter/flavors/go@v8
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DISABLE_LINTERS: SPELL_CSPELL,COPYPASTE_JSCPD
