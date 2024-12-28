@@ -1,4 +1,4 @@
-name: Generate AoC 2015Badges
+name: Generate AoC Badges
 on:
   push:
     branches:
