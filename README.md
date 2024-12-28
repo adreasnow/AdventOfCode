@@ -6,11 +6,9 @@ At the moment I'm doing them in golang, simply because I really enjoy using the 
 
 ## Progress
 
-[![Mega-Linter](https://github.com/adreasnow/AdventOfCode/workflows/Mega-Linter/badge.svg)](https://github.com/adreasnow/AdventOfCode/actions?query=workflow%3AMega-Linter)
-
 ### 2015
 
-![](<https://img.shields.io/badge/Stars%20(2015)%20⭐-50-yellow>)<br/>![](<https://img.shields.io/badge/Days%20(2015)-25-red>)
+![](<https://img.shields.io/badge/Stars%20(2015)%20⭐-50-yellow>) ![](<https://img.shields.io/badge/Days%20(2015)-25-red>)
 
 |               |                                             Language                                              |      Threaded      |       Tests        |                       Special                        |
 | :------------ | :-----------------------------------------------------------------------------------------------: | :----------------: | :----------------: | :--------------------------------------------------: |
@@ -43,7 +41,7 @@ At the moment I'm doing them in golang, simply because I really enjoy using the 
 
 ### 2024
 
-![](<https://img.shields.io/badge/Stars%20(2024)%20⭐-2-yellow>)<br/>![](<https://img.shields.io/badge/Days%20(2024)-1-red>)
+![](<https://img.shields.io/badge/Stars%20(2024)%20⭐-2-yellow>) ![](<https://img.shields.io/badge/Days%20(2024)-1-red>)
 
 |        |                                          Language                                          | Threaded | Tests | Special |
 | :----- | :----------------------------------------------------------------------------------------: | :------: | :---: | :-----: |
