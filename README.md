@@ -38,8 +38,8 @@ At the moment I'm doing them in golang, simply because I really enjoy using the 
 | Day 21        |    <a href="2015/21/main.go"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a>     | :white_check_mark: |                    |                Keep It Simple Stupid                 |
 | Day 22        |    <a href="2015/22/main.go"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a>     | :white_check_mark: | :white_check_mark: | 5 bit counter, multiple goroutines, stateful logging |
 | Day 23        |    <a href="2015/23/main.go"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a>     |                    | :white_check_mark: |  Turing machine, return fuctions, slice of pointers  |
-| Day 24        |    <a href="2015/23/main.go"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a>     |                    | :white_check_mark: |                                                      |
-| Day 25        |                                                                                                   |                    |                    |                                                      |
+| Day 24        |    <a href="2015/24/main.go"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a>     |                    | :white_check_mark: |                                                      |
+| Day 25        |    <a href="2015/24/main.go"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a>     |                    | :white_check_mark: |            Keep It Simple Stupid (again)             |
 
 ### 2016
 
