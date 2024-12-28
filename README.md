@@ -43,7 +43,7 @@ At the moment I'm doing them in golang, simply because I really enjoy using the 
 
 ### 2024
 
-![](<https://img.shields.io/badge/Stars%20(2024)%20⭐-0-yellow>)<br/>![](<https://img.shields.io/badge/Days%20(2024)-0-red>)
+![](<https://img.shields.io/badge/Stars%20(2024)%20⭐-2-yellow>)<br/>![](<https://img.shields.io/badge/Days%20(2024)-1-red>)
 
 |        |                                          Language                                          | Threaded | Tests | Special |
 | :----- | :----------------------------------------------------------------------------------------: | :------: | :---: | :-----: |
