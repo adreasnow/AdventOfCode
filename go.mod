@@ -3,6 +3,7 @@ module aoc
 go 1.22.4
 
 require (
+	github.com/ernestosuarez/itertools v0.0.0-20190516153236-40a02c159e7b
 	github.com/mowshon/iterium v1.0.0
 	github.com/stretchr/testify v1.10.0
 )
