@@ -22,14 +22,14 @@ jobs:
           year: 2015
           starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/Stars%20\(2015\)%20⭐-)[0-9]+(?=-yellow)'
           daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/Days%20\(2015\)-)[0-9]+(?=-red)'
-      - name: AoC-badges 2016
+      - name: AoC-badges 2024
         uses: J0B10/aoc-badges-action@v3.0.0
         with:
           userid: 3970684
           session: ${{ secrets.AOC_SESSION }}
-          year: 2016
-          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/Stars%20\(2016\)%20⭐-)[0-9]+(?=-yellow)'
-          daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/Days%20\(2016\)-)[0-9]+(?=-red)'
+          year: 2024
+          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/Stars%20\(2024\)%20⭐-)[0-9]+(?=-yellow)'
+          daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/Days%20\(2024\)-)[0-9]+(?=-red)'
 
       - uses: stefanzweifel/git-auto-commit-action@v5 # Step that pushes these local changes back to your github repo
         with:

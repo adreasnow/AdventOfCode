@@ -2,7 +2,7 @@
 
 Working through the [AoC tasks](https://adventofcode.com), this is a space in which I can collect all of my solutions.
 
-At the moment I'm doing them in golang, simply because I really enjoy using the language and I feel like I can develop more robust code much more simply than if I were to try and use C# (what I use for work) or python (what I used for my PhD). I may decide to switch to C# at some point so that I can hone those skills, but I really do dislike OOP and the tedium of .net.
+At the moment I'm doing them in golang, simply because I really enjoy using the language and I feel like I can develop more robust code much more simply than if I were to try and use C# (what I use for work) or python (what I used for my PhD). I may decide to switch to C# at some point so that I can hone those skills, but I really do dislike OOP and the tedium of .NET.
 
 ## Progress
 
@@ -41,36 +41,36 @@ At the moment I'm doing them in golang, simply because I really enjoy using the 
 | Day 24        |    <a href="2015/24/main.go"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a>     |                    | :white_check_mark: |                                                      |
 | Day 25        |    <a href="2015/24/main.go"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a>     |                    | :white_check_mark: |            Keep It Simple Stupid (again)             |
 
-### 2016
+### 2024
 
-![](<https://img.shields.io/badge/Stars%20(2016)%20⭐-0-yellow>)<br/>![](<https://img.shields.io/badge/Days%20(2016)-0-red>)
+![](<https://img.shields.io/badge/Stars%20(2024)%20⭐-0-yellow>)<br/>![](<https://img.shields.io/badge/Days%20(2024)-0-red>)
 
-|        | Language | Threaded | Tests | Special |
-| :----- | :------: | :------: | :---: | :-----: |
-| Day 1  |          |          |       |         |
-| Day 2  |          |          |       |         |
-| Day 3  |          |          |       |         |
-| Day 4  |          |          |       |         |
-| Day 5  |          |          |       |         |
-| Day 6  |          |          |       |         |
-| Day 7  |          |          |       |         |
-| Day 8  |          |          |       |         |
-| Day 9  |          |          |       |         |
-| Day 10 |          |          |       |         |
-| Day 11 |          |          |       |         |
-| Day 12 |          |          |       |         |
-| Day 13 |          |          |       |         |
-| Day 14 |          |          |       |         |
-| Day 15 |          |          |       |         |
-| Day 16 |          |          |       |         |
-| Day 17 |          |          |       |         |
-| Day 18 |          |          |       |         |
-| Day 19 |          |          |       |         |
-| Day 20 |          |          |       |         |
-| Day 21 |          |          |       |         |
-| Day 22 |          |          |       |         |
-| Day 23 |          |          |       |         |
-| Day 24 |          |          |       |         |
-| Day 25 |          |          |       |         |
+|        |                                          Language                                          | Threaded | Tests | Special |
+| :----- | :----------------------------------------------------------------------------------------: | :------: | :---: | :-----: |
+| Day 1  | <a href="2024/01/main.go"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> |          |       |         |
+| Day 2  |                                                                                            |          |       |         |
+| Day 3  |                                                                                            |          |       |         |
+| Day 4  |                                                                                            |          |       |         |
+| Day 5  |                                                                                            |          |       |         |
+| Day 6  |                                                                                            |          |       |         |
+| Day 7  |                                                                                            |          |       |         |
+| Day 8  |                                                                                            |          |       |         |
+| Day 9  |                                                                                            |          |       |         |
+| Day 10 |                                                                                            |          |       |         |
+| Day 11 |                                                                                            |          |       |         |
+| Day 12 |                                                                                            |          |       |         |
+| Day 13 |                                                                                            |          |       |         |
+| Day 14 |                                                                                            |          |       |         |
+| Day 15 |                                                                                            |          |       |         |
+| Day 16 |                                                                                            |          |       |         |
+| Day 17 |                                                                                            |          |       |         |
+| Day 18 |                                                                                            |          |       |         |
+| Day 19 |                                                                                            |          |       |         |
+| Day 20 |                                                                                            |          |       |         |
+| Day 21 |                                                                                            |          |       |         |
+| Day 22 |                                                                                            |          |       |         |
+| Day 23 |                                                                                            |          |       |         |
+| Day 24 |                                                                                            |          |       |         |
+| Day 25 |                                                                                            |          |       |         |
 
-Icons from favicons
+Icons from fontawesome
