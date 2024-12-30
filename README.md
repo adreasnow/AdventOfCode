@@ -4,9 +4,17 @@ Working through the [Advent of Code tasks](https://adventofcode.com), this is a 
 
 ## Progress
 
-### 2015
-
+![](<https://img.shields.io/badge/Stars%20(2024)%20⭐-4-yellow>) ![](<https://img.shields.io/badge/Days%20(2024)-2-red>)
 ![](<https://img.shields.io/badge/Stars%20(2015)%20⭐-50-yellow>) ![](<https://img.shields.io/badge/Days%20(2015)-25-red>)
+
+### 2024
+
+|       |                                           Language                                           | Threaded |       Tests        | Special |
+| :---- | :------------------------------------------------------------------------------------------: | :------: | :----------------: | :-----: |
+| Day 1 | <a href="2024/01/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> |          |                    |         |
+| Day 2 | <a href="2024/02/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> |          | :white_check_mark: |         |
+
+### 2015
 
 |               |                                              Language                                               |      Threaded      |       Tests        |                       Special                        |
 | :------------ | :-------------------------------------------------------------------------------------------------: | :----------------: | :----------------: | :--------------------------------------------------: |
@@ -36,37 +44,5 @@ Working through the [Advent of Code tasks](https://adventofcode.com), this is a 
 | Day 23        |    <a href="2015/23/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a>     |                    | :white_check_mark: |  Turing machine, return fuctions, slice of pointers  |
 | Day 24        |    <a href="2015/24/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a>     |                    | :white_check_mark: |                                                      |
 | Day 25        |    <a href="2015/24/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a>     |                    | :white_check_mark: |            Keep It Simple Stupid (again)             |
-
-### 2024
-
-![](<https://img.shields.io/badge/Stars%20(2024)%20⭐-4-yellow>) ![](<https://img.shields.io/badge/Days%20(2024)-2-red>)
-
-|        |                                           Language                                           | Threaded |       Tests        | Special |
-| :----- | :------------------------------------------------------------------------------------------: | :------: | :----------------: | :-----: |
-| Day 1  | <a href="2024/01/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> |          |                    |         |
-| Day 2  | <a href="2024/02/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> |          | :white_check_mark: |         |
-| Day 3  |                                                                                              |          |                    |         |
-| Day 4  |                                                                                              |          |                    |         |
-| Day 5  |                                                                                              |          |                    |         |
-| Day 6  |                                                                                              |          |                    |         |
-| Day 7  |                                                                                              |          |                    |         |
-| Day 8  |                                                                                              |          |                    |         |
-| Day 9  |                                                                                              |          |                    |         |
-| Day 10 |                                                                                              |          |                    |         |
-| Day 11 |                                                                                              |          |                    |         |
-| Day 12 |                                                                                              |          |                    |         |
-| Day 13 |                                                                                              |          |                    |         |
-| Day 14 |                                                                                              |          |                    |         |
-| Day 15 |                                                                                              |          |                    |         |
-| Day 16 |                                                                                              |          |                    |         |
-| Day 17 |                                                                                              |          |                    |         |
-| Day 18 |                                                                                              |          |                    |         |
-| Day 19 |                                                                                              |          |                    |         |
-| Day 20 |                                                                                              |          |                    |         |
-| Day 21 |                                                                                              |          |                    |         |
-| Day 22 |                                                                                              |          |                    |         |
-| Day 23 |                                                                                              |          |                    |         |
-| Day 24 |                                                                                              |          |                    |         |
-| Day 25 |                                                                                              |          |                    |         |
 
 Icons from fontawesome
