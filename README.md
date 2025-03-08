@@ -13,6 +13,7 @@ Working through the [Advent of Code tasks](https://adventofcode.com), this is a 
 | :---- | :------------------------------------------------------------------------------------------: | :------: | :----------------: | :-----: |
 | Day 1 | <a href="2024/01/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> |          |                    |         |
 | Day 2 | <a href="2024/02/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> |          | :white_check_mark: |         |
+| Day 3 | <a href="2024/03/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> |          |                    |         |
 
 ### 2015
 
