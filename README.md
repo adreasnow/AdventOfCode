@@ -4,7 +4,7 @@ Working through the [Advent of Code tasks](https://adventofcode.com), this is a 
 
 ## Progress
 
-![](<https://img.shields.io/badge/Stars%20(2024)%20⭐-4-yellow>) ![](<https://img.shields.io/badge/Days%20(2024)-2-red>) <br/>
+![](<https://img.shields.io/badge/Stars%20(2024)%20⭐-6-yellow>) ![](<https://img.shields.io/badge/Days%20(2024)-3-red>) <br/>
 ![](<https://img.shields.io/badge/Stars%20(2015)%20⭐-50-yellow>) ![](<https://img.shields.io/badge/Days%20(2015)-25-red>)
 
 ### 2024
