@@ -9,11 +9,12 @@ Working through the [Advent of Code tasks](https://adventofcode.com), this is a 
 
 ### 2024
 
-|       |                                           Language                                           | Threaded |       Tests        | Special |
-| :---- | :------------------------------------------------------------------------------------------: | :------: | :----------------: | :-----: |
-| Day 1 | <a href="2024/01/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> |          |                    |         |
-| Day 2 | <a href="2024/02/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> |          | :white_check_mark: |         |
-| Day 3 | <a href="2024/03/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> |          |                    |         |
+|       |                                           Language                                           | Threaded |       Tests        |                 Special                  |
+| :---- | :------------------------------------------------------------------------------------------: | :------: | :----------------: | :--------------------------------------: |
+| Day 1 | <a href="2024/01/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> |          |                    |                                          |
+| Day 2 | <a href="2024/02/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> |          | :white_check_mark: |                                          |
+| Day 3 | <a href="2024/03/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> |          |                    |                                          |
+| Day 4 | <a href="2024/04/README.md"><img src="icons/golang.svg" alt="GoLang" style="width:2em;"></a> |          | :white_check_mark: | Mental matrix rotations :expressionless: |
 
 ### 2015
 
